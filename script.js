@@ -1,6 +1,7 @@
 const form = document.getElementById("form");
 const input = document.getElementById("input");
 const todosUL = document.getElementById("todos");
+const small = document.getElementById("small");
 
 const todos = JSON.parse(localStorage.getItem("todos"));
 
@@ -19,6 +20,10 @@ function addTodo(todo) {
 
   if (todo) {
     todoText = todo.text;
+  }
+
+  if (todoText) {
+    small.style.display = "flex";
   }
 
   if (todoText) {
