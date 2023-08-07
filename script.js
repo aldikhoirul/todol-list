@@ -34,7 +34,7 @@ function addTodo(todo) {
       updateLS();
     });
 
-    todoEl.addEventListener("contextmenu", (e) => {
+    todoEl.addEventListener("dblclick", (e) => {
       e.preventDefault();
 
       todoEl.remove();
