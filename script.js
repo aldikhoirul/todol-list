@@ -43,6 +43,7 @@ function addTodo(todo) {
       e.preventDefault();
 
       todoEl.remove();
+      small.style.display = "none";
       updateLS();
     });
 
