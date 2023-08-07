@@ -1,7 +1,6 @@
 const form = document.getElementById("form");
 const input = document.getElementById("input");
 const todosUL = document.getElementById("todos");
-const small = document.getElementById("small");
 
 const todos = JSON.parse(localStorage.getItem("todos"));
 
@@ -23,10 +22,6 @@ function addTodo(todo) {
   }
 
   if (todoText) {
-    small.style.display = "flex";
-  }
-
-  if (todoText) {
     const todoEl = document.createElement("li");
     if (todo && todo.completed) {
       todoEl.classList.add("completed");
@@ -43,7 +38,6 @@ function addTodo(todo) {
       e.preventDefault();
 
       todoEl.remove();
-      small.style.display = "none";
       updateLS();
     });
 
